@@ -1,0 +1,36 @@
+*** Settings ***
+Resource          operate.txt
+
+*** Variables ***
+${url}            http://172.16.0.171/hubble-ui/    # 系统地址
+@{users}          banghui    123456    # 用户名|密码
+
+*** Keywords ***
+login
+    Open Browser    ${url}    gc
+    Maximize Browser Window
+    等待元素可见    id=username
+    输入文本    name=username    @{users}[0]
+    输入密码    name=password    @{users}[1]
+    Element Should Be Enabled    id=kc-login
+    点击元素    id=kc-login
+    Wait Until Page Contains    请选择租户    5    Error
+    点击按钮    default
+    Sleep    1
+    Wait Until Element Contains    css=[tooltip=退出]    退出登录    5    Error
+    等待元素可见    css=[tooltip=分区总览]
+    点击元素    css=[tooltip=分区总览]
+    Sleep    3
+
+Enter_menu
+    [Arguments]    ${first_menu}    ${second_menu}
+    [Documentation]    进入菜单
+    ...
+    ...    需要两个参数，一级菜单 和 二级菜单。
+    ...
+    ...    若无二级菜单，请填写 none
+    点击元素    css=[tooltip=${first_menu}]
+    Run Keyword If    '${second_menu}' != 'none'    点击元素    css=[tooltip=${second_menu}]
+
+Enter_dashboard
+    点击元素    css=[tooltip=分区总览]

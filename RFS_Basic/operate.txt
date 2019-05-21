@@ -1,0 +1,58 @@
+*** Settings ***
+Library           Selenium2Library
+Library           Screenshot
+Library           Collections
+Library           String
+Library           DateTime
+Library           Collections
+
+*** Keywords ***
+点击按钮
+    [Arguments]    ${button}
+    Click Button    ${button}
+
+点击元素
+    [Arguments]    ${ele}
+    Click Element    ${ele}
+
+点击Lnk
+    [Arguments]    ${link}
+    Click Link    ${link}
+
+输入文本
+    [Arguments]    ${ele}    ${text}
+    Input Text    ${ele}    ${text}
+
+输入密码
+    [Arguments]    ${ele}    ${pwd}
+    Input Password    ${ele}    ${pwd}
+
+选择列表
+    [Arguments]    ${ele}    ${value}
+    Select From List By Label    ${ele}    ${value}
+
+上传文件
+    [Arguments]    ${ele}    ${file}
+    Choose File    ${ele}    ${file}
+
+鼠标停留
+    [Arguments]    ${ele}
+    [Documentation]    模拟鼠标悬停在元素定位器上。
+    Mouse Over    ${ele}
+
+等待元素可见
+    [Arguments]    ${ele}
+    [Documentation]    Waits until element locator is visible. （等待元素可见，默认5s超时）
+    ...
+    ...    Arguments:
+    ...    locator
+    Wait Until Element Is Visible    ${ele}    5    Error,"${ele}"不可见!!!
+
+截图
+    [Arguments]    ${img_name}
+    Comment    Capture Page Screenshot    ${img_name}.png    #{index}-${img_name}.png
+    Take Screenshot    ${img_name}.png    #截取当前系统屏幕
+
+回车键
+    [Arguments]    ${ele}
+    Press Key    ${ele}    \\13

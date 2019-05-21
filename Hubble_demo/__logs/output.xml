@@ -1,0 +1,1763 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.7.2 on win32)" generated="20190429 13:18:01.553" rpa="false">
+<suite id="s1" name="Hubble demo" source="F:\AUTO\RIDE\Hubble_demo">
+<suite id="s1-s1" name="0-1分区准备" source="F:\AUTO\RIDE\Hubble_demo\0-1分区准备">
+<suite id="s1-s1-s1" name="新增分区" source="F:\AUTO\RIDE\Hubble_demo\0-1分区准备\新增分区.robot">
+<test id="s1-s1-s1-t1" name="case01">
+<kw name="login" library="common" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>gc</arg>
+</arguments>
+<msg timestamp="20190429 13:18:01.959" level="INFO">Opening browser 'gc' to base url 'http://172.16.2.179/hubble-ui/'.</msg>
+<status status="PASS" starttime="20190429 13:18:01.958" endtime="20190429 13:18:06.837"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190429 13:18:06.838" endtime="20190429 13:18:07.974"></status>
+</kw>
+<kw name="等待元素可见" library="operate">
+<doc>Waits until element locator is visible. （等待元素可见，默认5s超时）</doc>
+<arguments>
+<arg>id=username</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>5</arg>
+<arg>Error,"${ele}"不可见!!!</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:07.975" endtime="20190429 13:18:08.009"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:07.975" endtime="20190429 13:18:08.010"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>name=username</arg>
+<arg>@{users}[0]</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:08.011" level="INFO">Typing text 'banghui' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20190429 13:18:08.011" endtime="20190429 13:18:08.133"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:08.010" endtime="20190429 13:18:08.133"></status>
+</kw>
+<kw name="输入密码" library="operate">
+<arguments>
+<arg>name=password</arg>
+<arg>@{users}[1]</arg>
+</arguments>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${pwd}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:08.134" level="INFO">Typing password into text field 'name=password'.</msg>
+<status status="PASS" starttime="20190429 13:18:08.134" endtime="20190429 13:18:08.258"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:08.133" endtime="20190429 13:18:08.259"></status>
+</kw>
+<kw name="Element Should Be Enabled" library="Selenium2Library">
+<doc>Verifies that element identified with ``locator`` is enabled.</doc>
+<arguments>
+<arg>id=kc-login</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:08.259" endtime="20190429 13:18:08.291"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>id=kc-login</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:08.293" level="INFO">Clicking element 'id=kc-login'.</msg>
+<status status="PASS" starttime="20190429 13:18:08.292" endtime="20190429 13:18:08.964"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:08.292" endtime="20190429 13:18:08.965"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>请选择租户</arg>
+<arg>20</arg>
+<arg>Error</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:08.966" endtime="20190429 13:18:10.393"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>${tenant}</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:10.395" level="INFO">Clicking button 'default'.</msg>
+<status status="PASS" starttime="20190429 13:18:10.394" endtime="20190429 13:18:10.509"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:10.394" endtime="20190429 13:18:10.510"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:11.512" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:10.511" endtime="20190429 13:18:11.512"></status>
+</kw>
+<kw name="Wait Until Element Contains" library="Selenium2Library">
+<doc>Waits until element ``locator`` contains ``text``.</doc>
+<arguments>
+<arg>css=[tooltip=退出]</arg>
+<arg>退出</arg>
+<arg>5</arg>
+<arg>Error</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:11.513" endtime="20190429 13:18:11.580"></status>
+</kw>
+<kw name="等待元素可见" library="operate">
+<doc>Waits until element locator is visible. （等待元素可见，默认5s超时）</doc>
+<arguments>
+<arg>css=[tooltip=分区管理]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>5</arg>
+<arg>Error,"${ele}"不可见!!!</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:11.583" endtime="20190429 13:18:11.619"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:11.581" endtime="20190429 13:18:11.620"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[tooltip=分区管理]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:11.621" level="INFO">Clicking element 'css=[tooltip=分区管理]'.</msg>
+<status status="PASS" starttime="20190429 13:18:11.621" endtime="20190429 13:18:11.731"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:11.620" endtime="20190429 13:18:11.732"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190429 13:18:14.735" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190429 13:18:11.733" endtime="20190429 13:18:14.735"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:01.957" endtime="20190429 13:18:14.736"></status>
+</kw>
+<kw name="AddZone" library="zoneResource">
+<doc>参数： 分区名称、分区描述、分区功能</doc>
+<arguments>
+<arg>原始区</arg>
+<arg>我是描述信息</arg>
+<arg>应用业务字典</arg>
+</arguments>
+<kw name="Enter_menu" library="common">
+<doc>进入菜单</doc>
+<arguments>
+<arg>分区管理</arg>
+<arg>none</arg>
+</arguments>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[tooltip=${first_menu}]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:14.744" level="INFO">Clicking element 'css=[tooltip=分区管理]'.</msg>
+<status status="PASS" starttime="20190429 13:18:14.743" endtime="20190429 13:18:14.804"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:14.742" endtime="20190429 13:18:14.804"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${second_menu}' != 'none'</arg>
+<arg>点击元素</arg>
+<arg>css=[tooltip=${second_menu}]</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:14.805" endtime="20190429 13:18:14.806"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:14.741" endtime="20190429 13:18:14.807"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>新建</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:14.809" level="INFO">Clicking button '新建'.</msg>
+<status status="PASS" starttime="20190429 13:18:14.808" endtime="20190429 13:18:15.006"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:14.807" endtime="20190429 13:18:15.006"></status>
+</kw>
+<kw name="等待元素可见" library="operate">
+<doc>Waits until element locator is visible. （等待元素可见，默认5s超时）</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>5</arg>
+<arg>Error,"${ele}"不可见!!!</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:15.008" endtime="20190429 13:18:15.075"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:15.007" endtime="20190429 13:18:15.076"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:15.077" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:15.077" endtime="20190429 13:18:15.124"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20190429 13:18:15.626" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:15.125" endtime="20190429 13:18:15.626"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:15.628" level="INFO">Typing text '原始区' into text field 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:15.628" endtime="20190429 13:18:15.755"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:15.627" endtime="20190429 13:18:15.755"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:15.756" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:15.756" endtime="20190429 13:18:15.805"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+<arg>${zone_desc}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:15.809" level="INFO">Typing text '我是描述信息' into text field 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:15.808" endtime="20190429 13:18:15.980"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:15.806" endtime="20190429 13:18:15.980"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "应用业务字典"</arg>
+<arg>css=input[ng-model="addParam.businessDictionary"]</arg>
+<arg>"${zone_func}" == "推送服务"</arg>
+<arg>css=input[ng-model="addParam.pushService"]</arg>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<assign>
+<var>${func}</var>
+</assign>
+<msg timestamp="20190429 13:18:15.982" level="INFO">${func} = css=input[ng-model="addParam.businessDictionary"]</msg>
+<status status="PASS" starttime="20190429 13:18:15.981" endtime="20190429 13:18:15.983"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${zone_func}" not in ["应用业务字典","推送服务","数据资源地图"]</arg>
+<arg>Fail</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:15.984" endtime="20190429 13:18:15.985"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=label[class="cus-switch i-switch bg-success"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:15.987" level="INFO">Clicking element 'css=label[class="cus-switch i-switch bg-success"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:15.986" endtime="20190429 13:18:16.103"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:15.985" endtime="20190429 13:18:16.104"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:17.105" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:16.104" endtime="20190429 13:18:17.105"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>${func}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:17.108" level="INFO">Clicking element 'css=input[ng-model="addParam.businessDictionary"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:17.107" endtime="20190429 13:18:17.175"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:17.106" endtime="20190429 13:18:17.175"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>确认</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:17.176" level="INFO">Clicking button '确认'.</msg>
+<status status="PASS" starttime="20190429 13:18:17.176" endtime="20190429 13:18:17.277"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:17.175" endtime="20190429 13:18:17.278"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>新建成功</arg>
+<arg>15</arg>
+<arg>ERROR</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:17.278" endtime="20190429 13:18:17.518"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>新建成功</arg>
+</arguments>
+<msg timestamp="20190429 13:18:17.538" level="INFO">Current page contains text '新建成功'.</msg>
+<status status="PASS" starttime="20190429 13:18:17.519" endtime="20190429 13:18:17.539"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<msg timestamp="20190429 13:18:17.741" level="INFO">Slept 200 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:17.540" endtime="20190429 13:18:17.741"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[ng-model="searchParam.search"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:17.744" level="INFO">Typing text '原始区' into text field 'css=[ng-model="searchParam.search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:17.743" endtime="20190429 13:18:17.959"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:17.742" endtime="20190429 13:18:17.960"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:18.962" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:17.960" endtime="20190429 13:18:18.962"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[class="fa fa-search"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:18.966" level="INFO">Clicking element 'css=[class="fa fa-search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:18.965" endtime="20190429 13:18:19.121"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:18.963" endtime="20190429 13:18:19.122"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190429 13:18:22.124" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190429 13:18:19.123" endtime="20190429 13:18:22.124"></status>
+</kw>
+<kw name="Element Attribute Should Be Equal" library="verify">
+<doc>Name:
+Element Attribute Should Be</doc>
+<arguments>
+<arg>xpath=*//div[@class='data-card ng-isolate-scope'][1]/div/div/h3</arg>
+<arg>uib-tooltip</arg>
+<arg>${zone_name}</arg>
+<arg>未找到！！！</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${attribute}</arg>
+</arguments>
+<assign>
+<var>${tmp}</var>
+</assign>
+<msg timestamp="20190429 13:18:22.148" level="INFO">${tmp} = 原始区</msg>
+<status status="PASS" starttime="20190429 13:18:22.125" endtime="20190429 13:18:22.148"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${tmp}</arg>
+<arg>${fileds}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:22.149" endtime="20190429 13:18:22.149"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:22.125" endtime="20190429 13:18:22.150"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:14.740" endtime="20190429 13:18:22.151"></status>
+</kw>
+<kw name="AddZone" library="zoneResource">
+<doc>参数： 分区名称、分区描述、分区功能</doc>
+<arguments>
+<arg>缓冲区</arg>
+<arg>我是描述信息</arg>
+<arg>应用业务字典</arg>
+</arguments>
+<kw name="Enter_menu" library="common">
+<doc>进入菜单</doc>
+<arguments>
+<arg>分区管理</arg>
+<arg>none</arg>
+</arguments>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[tooltip=${first_menu}]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:22.157" level="INFO">Clicking element 'css=[tooltip=分区管理]'.</msg>
+<status status="PASS" starttime="20190429 13:18:22.156" endtime="20190429 13:18:22.221"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:22.155" endtime="20190429 13:18:22.222"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${second_menu}' != 'none'</arg>
+<arg>点击元素</arg>
+<arg>css=[tooltip=${second_menu}]</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:22.223" endtime="20190429 13:18:22.224"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:22.154" endtime="20190429 13:18:22.224"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>新建</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:22.226" level="INFO">Clicking button '新建'.</msg>
+<status status="PASS" starttime="20190429 13:18:22.225" endtime="20190429 13:18:22.325"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:22.225" endtime="20190429 13:18:22.325"></status>
+</kw>
+<kw name="等待元素可见" library="operate">
+<doc>Waits until element locator is visible. （等待元素可见，默认5s超时）</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>5</arg>
+<arg>Error,"${ele}"不可见!!!</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:22.327" endtime="20190429 13:18:22.360"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:22.326" endtime="20190429 13:18:22.361"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:22.362" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:22.362" endtime="20190429 13:18:22.393"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20190429 13:18:22.894" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:22.394" endtime="20190429 13:18:22.894"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:22.896" level="INFO">Typing text '缓冲区' into text field 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:22.896" endtime="20190429 13:18:23.113"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:22.895" endtime="20190429 13:18:23.114"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:23.116" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:23.115" endtime="20190429 13:18:23.155"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+<arg>${zone_desc}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:23.158" level="INFO">Typing text '我是描述信息' into text field 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:23.157" endtime="20190429 13:18:23.309"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:23.156" endtime="20190429 13:18:23.310"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "应用业务字典"</arg>
+<arg>css=input[ng-model="addParam.businessDictionary"]</arg>
+<arg>"${zone_func}" == "推送服务"</arg>
+<arg>css=input[ng-model="addParam.pushService"]</arg>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<assign>
+<var>${func}</var>
+</assign>
+<msg timestamp="20190429 13:18:23.312" level="INFO">${func} = css=input[ng-model="addParam.businessDictionary"]</msg>
+<status status="PASS" starttime="20190429 13:18:23.311" endtime="20190429 13:18:23.312"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${zone_func}" not in ["应用业务字典","推送服务","数据资源地图"]</arg>
+<arg>Fail</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:23.313" endtime="20190429 13:18:23.314"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=label[class="cus-switch i-switch bg-success"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:23.317" level="INFO">Clicking element 'css=label[class="cus-switch i-switch bg-success"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:23.316" endtime="20190429 13:18:23.397"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:23.315" endtime="20190429 13:18:23.398"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:24.399" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:23.399" endtime="20190429 13:18:24.399"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>${func}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:24.401" level="INFO">Clicking element 'css=input[ng-model="addParam.businessDictionary"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:24.400" endtime="20190429 13:18:24.462"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:24.399" endtime="20190429 13:18:24.462"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>确认</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:24.463" level="INFO">Clicking button '确认'.</msg>
+<status status="PASS" starttime="20190429 13:18:24.463" endtime="20190429 13:18:24.542"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:24.462" endtime="20190429 13:18:24.542"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>新建成功</arg>
+<arg>15</arg>
+<arg>ERROR</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:24.543" endtime="20190429 13:18:24.982"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>新建成功</arg>
+</arguments>
+<msg timestamp="20190429 13:18:25.003" level="INFO">Current page contains text '新建成功'.</msg>
+<status status="PASS" starttime="20190429 13:18:24.983" endtime="20190429 13:18:25.004"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<msg timestamp="20190429 13:18:25.205" level="INFO">Slept 200 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:25.004" endtime="20190429 13:18:25.205"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[ng-model="searchParam.search"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:25.207" level="INFO">Typing text '缓冲区' into text field 'css=[ng-model="searchParam.search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:25.206" endtime="20190429 13:18:25.291"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:25.206" endtime="20190429 13:18:25.291"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:26.292" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:25.292" endtime="20190429 13:18:26.292"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[class="fa fa-search"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:26.294" level="INFO">Clicking element 'css=[class="fa fa-search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:26.293" endtime="20190429 13:18:26.349"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:26.292" endtime="20190429 13:18:26.350"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190429 13:18:29.352" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190429 13:18:26.350" endtime="20190429 13:18:29.352"></status>
+</kw>
+<kw name="Element Attribute Should Be Equal" library="verify">
+<doc>Name:
+Element Attribute Should Be</doc>
+<arguments>
+<arg>xpath=*//div[@class='data-card ng-isolate-scope'][1]/div/div/h3</arg>
+<arg>uib-tooltip</arg>
+<arg>${zone_name}</arg>
+<arg>未找到！！！</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${attribute}</arg>
+</arguments>
+<assign>
+<var>${tmp}</var>
+</assign>
+<msg timestamp="20190429 13:18:29.373" level="INFO">${tmp} = 缓冲区</msg>
+<status status="PASS" starttime="20190429 13:18:29.353" endtime="20190429 13:18:29.373"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${tmp}</arg>
+<arg>${fileds}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:29.374" endtime="20190429 13:18:29.375"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:29.353" endtime="20190429 13:18:29.375"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:22.154" endtime="20190429 13:18:29.376"></status>
+</kw>
+<kw name="AddZone" library="zoneResource">
+<doc>参数： 分区名称、分区描述、分区功能</doc>
+<arguments>
+<arg>贴源区</arg>
+<arg>我是描述信息</arg>
+<arg>数据资源地图</arg>
+</arguments>
+<kw name="Enter_menu" library="common">
+<doc>进入菜单</doc>
+<arguments>
+<arg>分区管理</arg>
+<arg>none</arg>
+</arguments>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[tooltip=${first_menu}]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:29.384" level="INFO">Clicking element 'css=[tooltip=分区管理]'.</msg>
+<status status="PASS" starttime="20190429 13:18:29.383" endtime="20190429 13:18:29.446"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:29.382" endtime="20190429 13:18:29.447"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${second_menu}' != 'none'</arg>
+<arg>点击元素</arg>
+<arg>css=[tooltip=${second_menu}]</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:29.447" endtime="20190429 13:18:29.449"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:29.380" endtime="20190429 13:18:29.449"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>新建</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:29.452" level="INFO">Clicking button '新建'.</msg>
+<status status="PASS" starttime="20190429 13:18:29.451" endtime="20190429 13:18:29.560"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:29.450" endtime="20190429 13:18:29.561"></status>
+</kw>
+<kw name="等待元素可见" library="operate">
+<doc>Waits until element locator is visible. （等待元素可见，默认5s超时）</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>5</arg>
+<arg>Error,"${ele}"不可见!!!</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:29.563" endtime="20190429 13:18:29.591"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:29.562" endtime="20190429 13:18:29.592"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:29.593" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:29.593" endtime="20190429 13:18:29.636"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20190429 13:18:30.137" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:29.637" endtime="20190429 13:18:30.137"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:30.139" level="INFO">Typing text '贴源区' into text field 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:30.139" endtime="20190429 13:18:30.239"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:30.138" endtime="20190429 13:18:30.240"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:30.241" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:30.241" endtime="20190429 13:18:30.272"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+<arg>${zone_desc}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:30.273" level="INFO">Typing text '我是描述信息' into text field 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:30.273" endtime="20190429 13:18:30.390"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:30.272" endtime="20190429 13:18:30.391"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "应用业务字典"</arg>
+<arg>css=input[ng-model="addParam.businessDictionary"]</arg>
+<arg>"${zone_func}" == "推送服务"</arg>
+<arg>css=input[ng-model="addParam.pushService"]</arg>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<assign>
+<var>${func}</var>
+</assign>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "推送服务"</arg>
+<arg>css=input[ng-model="addParam.pushService"]</arg>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:30.392" endtime="20190429 13:18:30.393"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:30.392" endtime="20190429 13:18:30.393"></status>
+</kw>
+<msg timestamp="20190429 13:18:30.394" level="INFO">${func} = css=input[ng-model="addParam.dataMap"]</msg>
+<status status="PASS" starttime="20190429 13:18:30.391" endtime="20190429 13:18:30.394"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${zone_func}" not in ["应用业务字典","推送服务","数据资源地图"]</arg>
+<arg>Fail</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:30.394" endtime="20190429 13:18:30.394"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=label[class="cus-switch i-switch bg-success"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:30.396" level="INFO">Clicking element 'css=label[class="cus-switch i-switch bg-success"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:30.395" endtime="20190429 13:18:30.474"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:30.395" endtime="20190429 13:18:30.475"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:31.477" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:30.475" endtime="20190429 13:18:31.477"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>${func}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:31.481" level="INFO">Clicking element 'css=input[ng-model="addParam.dataMap"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:31.480" endtime="20190429 13:18:31.558"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:31.478" endtime="20190429 13:18:31.559"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>确认</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:31.561" level="INFO">Clicking button '确认'.</msg>
+<status status="PASS" starttime="20190429 13:18:31.560" endtime="20190429 13:18:31.644"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:31.560" endtime="20190429 13:18:31.645"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>新建成功</arg>
+<arg>15</arg>
+<arg>ERROR</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:31.645" endtime="20190429 13:18:32.082"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>新建成功</arg>
+</arguments>
+<msg timestamp="20190429 13:18:32.123" level="INFO">Current page contains text '新建成功'.</msg>
+<status status="PASS" starttime="20190429 13:18:32.083" endtime="20190429 13:18:32.123"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<msg timestamp="20190429 13:18:32.325" level="INFO">Slept 200 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:32.124" endtime="20190429 13:18:32.325"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[ng-model="searchParam.search"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:32.327" level="INFO">Typing text '贴源区' into text field 'css=[ng-model="searchParam.search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:32.327" endtime="20190429 13:18:32.453"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:32.326" endtime="20190429 13:18:32.454"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:33.455" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:32.454" endtime="20190429 13:18:33.455"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[class="fa fa-search"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:33.456" level="INFO">Clicking element 'css=[class="fa fa-search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:33.456" endtime="20190429 13:18:33.511"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:33.455" endtime="20190429 13:18:33.511"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190429 13:18:36.514" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190429 13:18:33.512" endtime="20190429 13:18:36.515"></status>
+</kw>
+<kw name="Element Attribute Should Be Equal" library="verify">
+<doc>Name:
+Element Attribute Should Be</doc>
+<arguments>
+<arg>xpath=*//div[@class='data-card ng-isolate-scope'][1]/div/div/h3</arg>
+<arg>uib-tooltip</arg>
+<arg>${zone_name}</arg>
+<arg>未找到！！！</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${attribute}</arg>
+</arguments>
+<assign>
+<var>${tmp}</var>
+</assign>
+<msg timestamp="20190429 13:18:36.537" level="INFO">${tmp} = 贴源区</msg>
+<status status="PASS" starttime="20190429 13:18:36.517" endtime="20190429 13:18:36.537"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${tmp}</arg>
+<arg>${fileds}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:36.538" endtime="20190429 13:18:36.538"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:36.516" endtime="20190429 13:18:36.539"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:29.379" endtime="20190429 13:18:36.539"></status>
+</kw>
+<kw name="AddZone" library="zoneResource">
+<doc>参数： 分区名称、分区描述、分区功能</doc>
+<arguments>
+<arg>业务区</arg>
+<arg>我是描述信息</arg>
+<arg>推送服务</arg>
+</arguments>
+<kw name="Enter_menu" library="common">
+<doc>进入菜单</doc>
+<arguments>
+<arg>分区管理</arg>
+<arg>none</arg>
+</arguments>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[tooltip=${first_menu}]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:36.544" level="INFO">Clicking element 'css=[tooltip=分区管理]'.</msg>
+<status status="PASS" starttime="20190429 13:18:36.544" endtime="20190429 13:18:36.601"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:36.543" endtime="20190429 13:18:36.602"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${second_menu}' != 'none'</arg>
+<arg>点击元素</arg>
+<arg>css=[tooltip=${second_menu}]</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:36.602" endtime="20190429 13:18:36.603"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:36.542" endtime="20190429 13:18:36.603"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>新建</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:36.605" level="INFO">Clicking button '新建'.</msg>
+<status status="PASS" starttime="20190429 13:18:36.604" endtime="20190429 13:18:36.705"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:36.604" endtime="20190429 13:18:36.705"></status>
+</kw>
+<kw name="等待元素可见" library="operate">
+<doc>Waits until element locator is visible. （等待元素可见，默认5s超时）</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>5</arg>
+<arg>Error,"${ele}"不可见!!!</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:36.706" endtime="20190429 13:18:36.737"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:36.706" endtime="20190429 13:18:36.738"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:36.739" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:36.739" endtime="20190429 13:18:36.776"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20190429 13:18:37.278" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:36.776" endtime="20190429 13:18:37.278"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:37.281" level="INFO">Typing text '业务区' into text field 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:37.280" endtime="20190429 13:18:37.396"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:37.279" endtime="20190429 13:18:37.396"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:37.398" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:37.397" endtime="20190429 13:18:37.429"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+<arg>${zone_desc}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:37.430" level="INFO">Typing text '我是描述信息' into text field 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:37.430" endtime="20190429 13:18:37.540"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:37.429" endtime="20190429 13:18:37.540"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "应用业务字典"</arg>
+<arg>css=input[ng-model="addParam.businessDictionary"]</arg>
+<arg>"${zone_func}" == "推送服务"</arg>
+<arg>css=input[ng-model="addParam.pushService"]</arg>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<assign>
+<var>${func}</var>
+</assign>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "推送服务"</arg>
+<arg>css=input[ng-model="addParam.pushService"]</arg>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:37.541" endtime="20190429 13:18:37.542"></status>
+</kw>
+<msg timestamp="20190429 13:18:37.542" level="INFO">${func} = css=input[ng-model="addParam.pushService"]</msg>
+<status status="PASS" starttime="20190429 13:18:37.541" endtime="20190429 13:18:37.542"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${zone_func}" not in ["应用业务字典","推送服务","数据资源地图"]</arg>
+<arg>Fail</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:37.543" endtime="20190429 13:18:37.543"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=label[class="cus-switch i-switch bg-success"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:37.545" level="INFO">Clicking element 'css=label[class="cus-switch i-switch bg-success"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:37.544" endtime="20190429 13:18:37.620"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:37.543" endtime="20190429 13:18:37.621"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:38.623" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:37.621" endtime="20190429 13:18:38.623"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>${func}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:38.626" level="INFO">Clicking element 'css=input[ng-model="addParam.pushService"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:38.625" endtime="20190429 13:18:38.692"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:38.624" endtime="20190429 13:18:38.692"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>确认</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:38.693" level="INFO">Clicking button '确认'.</msg>
+<status status="PASS" starttime="20190429 13:18:38.693" endtime="20190429 13:18:38.774"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:38.692" endtime="20190429 13:18:38.775"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>新建成功</arg>
+<arg>15</arg>
+<arg>ERROR</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:38.775" endtime="20190429 13:18:39.642"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>新建成功</arg>
+</arguments>
+<msg timestamp="20190429 13:18:39.658" level="INFO">Current page contains text '新建成功'.</msg>
+<status status="PASS" starttime="20190429 13:18:39.642" endtime="20190429 13:18:39.659"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<msg timestamp="20190429 13:18:39.860" level="INFO">Slept 200 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:39.659" endtime="20190429 13:18:39.860"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[ng-model="searchParam.search"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:39.862" level="INFO">Typing text '业务区' into text field 'css=[ng-model="searchParam.search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:39.861" endtime="20190429 13:18:39.958"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:39.860" endtime="20190429 13:18:39.958"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:40.960" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:39.959" endtime="20190429 13:18:40.960"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[class="fa fa-search"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:40.961" level="INFO">Clicking element 'css=[class="fa fa-search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:40.961" endtime="20190429 13:18:41.010"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:40.960" endtime="20190429 13:18:41.011"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190429 13:18:44.013" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190429 13:18:41.011" endtime="20190429 13:18:44.013"></status>
+</kw>
+<kw name="Element Attribute Should Be Equal" library="verify">
+<doc>Name:
+Element Attribute Should Be</doc>
+<arguments>
+<arg>xpath=*//div[@class='data-card ng-isolate-scope'][1]/div/div/h3</arg>
+<arg>uib-tooltip</arg>
+<arg>${zone_name}</arg>
+<arg>未找到！！！</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${attribute}</arg>
+</arguments>
+<assign>
+<var>${tmp}</var>
+</assign>
+<msg timestamp="20190429 13:18:44.035" level="INFO">${tmp} = 业务区</msg>
+<status status="PASS" starttime="20190429 13:18:44.016" endtime="20190429 13:18:44.035"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${tmp}</arg>
+<arg>${fileds}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:44.036" endtime="20190429 13:18:44.036"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:44.015" endtime="20190429 13:18:44.037"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:36.542" endtime="20190429 13:18:44.037"></status>
+</kw>
+<kw name="AddZone" library="zoneResource">
+<doc>参数： 分区名称、分区描述、分区功能</doc>
+<arguments>
+<arg>应用服务区</arg>
+<arg>我是描述信息</arg>
+<arg>数据资源地图</arg>
+</arguments>
+<kw name="Enter_menu" library="common">
+<doc>进入菜单</doc>
+<arguments>
+<arg>分区管理</arg>
+<arg>none</arg>
+</arguments>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[tooltip=${first_menu}]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:44.042" level="INFO">Clicking element 'css=[tooltip=分区管理]'.</msg>
+<status status="PASS" starttime="20190429 13:18:44.042" endtime="20190429 13:18:44.092"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:44.041" endtime="20190429 13:18:44.093"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'${second_menu}' != 'none'</arg>
+<arg>点击元素</arg>
+<arg>css=[tooltip=${second_menu}]</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:44.094" endtime="20190429 13:18:44.094"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:44.041" endtime="20190429 13:18:44.095"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>新建</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:44.098" level="INFO">Clicking button '新建'.</msg>
+<status status="PASS" starttime="20190429 13:18:44.096" endtime="20190429 13:18:44.206"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:44.095" endtime="20190429 13:18:44.206"></status>
+</kw>
+<kw name="等待元素可见" library="operate">
+<doc>Waits until element locator is visible. （等待元素可见，默认5s超时）</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>5</arg>
+<arg>Error,"${ele}"不可见!!!</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:44.208" endtime="20190429 13:18:44.236"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:44.207" endtime="20190429 13:18:44.237"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:44.238" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:44.238" endtime="20190429 13:18:44.275"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.5</arg>
+</arguments>
+<msg timestamp="20190429 13:18:44.777" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:44.275" endtime="20190429 13:18:44.777"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="name_task"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:44.779" level="INFO">Typing text '应用服务区' into text field 'css=[hubble-validate="name_task"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:44.778" endtime="20190429 13:18:44.897"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:44.777" endtime="20190429 13:18:44.897"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+</arguments>
+<msg timestamp="20190429 13:18:44.899" level="INFO">Simulating Mouse Over on element 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:44.898" endtime="20190429 13:18:44.928"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[hubble-validate="description"]</arg>
+<arg>${zone_desc}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:44.929" level="INFO">Typing text '我是描述信息' into text field 'css=[hubble-validate="description"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:44.929" endtime="20190429 13:18:45.069"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:44.928" endtime="20190429 13:18:45.070"></status>
+</kw>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "应用业务字典"</arg>
+<arg>css=input[ng-model="addParam.businessDictionary"]</arg>
+<arg>"${zone_func}" == "推送服务"</arg>
+<arg>css=input[ng-model="addParam.pushService"]</arg>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<assign>
+<var>${func}</var>
+</assign>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "推送服务"</arg>
+<arg>css=input[ng-model="addParam.pushService"]</arg>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<kw name="Set Variable If" library="BuiltIn">
+<doc>Sets variable based on the given condition.</doc>
+<arguments>
+<arg>"${zone_func}" == "数据资源地图"</arg>
+<arg>css=input[ng-model="addParam.dataMap"]</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:45.073" endtime="20190429 13:18:45.074"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:45.072" endtime="20190429 13:18:45.075"></status>
+</kw>
+<msg timestamp="20190429 13:18:45.076" level="INFO">${func} = css=input[ng-model="addParam.dataMap"]</msg>
+<status status="PASS" starttime="20190429 13:18:45.071" endtime="20190429 13:18:45.076"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>"${zone_func}" not in ["应用业务字典","推送服务","数据资源地图"]</arg>
+<arg>Fail</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:45.077" endtime="20190429 13:18:45.078"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=label[class="cus-switch i-switch bg-success"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:45.079" level="INFO">Clicking element 'css=label[class="cus-switch i-switch bg-success"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:45.079" endtime="20190429 13:18:45.158"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:45.078" endtime="20190429 13:18:45.159"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:46.162" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:45.160" endtime="20190429 13:18:46.162"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>${func}</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:46.166" level="INFO">Clicking element 'css=input[ng-model="addParam.dataMap"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:46.165" endtime="20190429 13:18:46.253"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:46.163" endtime="20190429 13:18:46.253"></status>
+</kw>
+<kw name="点击按钮" library="operate">
+<arguments>
+<arg>确认</arg>
+</arguments>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${button}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:46.255" level="INFO">Clicking button '确认'.</msg>
+<status status="PASS" starttime="20190429 13:18:46.254" endtime="20190429 13:18:46.329"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:46.254" endtime="20190429 13:18:46.329"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>新建成功</arg>
+<arg>15</arg>
+<arg>ERROR</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:46.329" endtime="20190429 13:18:46.813"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>新建成功</arg>
+</arguments>
+<msg timestamp="20190429 13:18:46.838" level="INFO">Current page contains text '新建成功'.</msg>
+<status status="PASS" starttime="20190429 13:18:46.814" endtime="20190429 13:18:46.839"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>0.2</arg>
+</arguments>
+<msg timestamp="20190429 13:18:47.040" level="INFO">Slept 200 milliseconds</msg>
+<status status="PASS" starttime="20190429 13:18:46.839" endtime="20190429 13:18:47.040"></status>
+</kw>
+<kw name="输入文本" library="operate">
+<arguments>
+<arg>css=[ng-model="searchParam.search"]</arg>
+<arg>${zone_name}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:47.042" level="INFO">Typing text '应用服务区' into text field 'css=[ng-model="searchParam.search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:47.041" endtime="20190429 13:18:47.168"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:47.040" endtime="20190429 13:18:47.168"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190429 13:18:48.171" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190429 13:18:47.169" endtime="20190429 13:18:48.172"></status>
+</kw>
+<kw name="点击元素" library="operate">
+<arguments>
+<arg>css=[class="fa fa-search"]</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+</arguments>
+<msg timestamp="20190429 13:18:48.174" level="INFO">Clicking element 'css=[class="fa fa-search"]'.</msg>
+<status status="PASS" starttime="20190429 13:18:48.173" endtime="20190429 13:18:48.229"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:48.172" endtime="20190429 13:18:48.230"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20190429 13:18:51.233" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20190429 13:18:48.231" endtime="20190429 13:18:51.233"></status>
+</kw>
+<kw name="Element Attribute Should Be Equal" library="verify">
+<doc>Name:
+Element Attribute Should Be</doc>
+<arguments>
+<arg>xpath=*//div[@class='data-card ng-isolate-scope'][1]/div/div/h3</arg>
+<arg>uib-tooltip</arg>
+<arg>${zone_name}</arg>
+<arg>未找到！！！</arg>
+</arguments>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${ele}</arg>
+<arg>${attribute}</arg>
+</arguments>
+<assign>
+<var>${tmp}</var>
+</assign>
+<msg timestamp="20190429 13:18:51.256" level="INFO">${tmp} = 应用服务区</msg>
+<status status="PASS" starttime="20190429 13:18:51.236" endtime="20190429 13:18:51.256"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${tmp}</arg>
+<arg>${fileds}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<status status="PASS" starttime="20190429 13:18:51.257" endtime="20190429 13:18:51.258"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:51.234" endtime="20190429 13:18:51.258"></status>
+</kw>
+<status status="PASS" starttime="20190429 13:18:44.040" endtime="20190429 13:18:51.258"></status>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190429 13:18:51.259" endtime="20190429 13:18:53.443"></status>
+</kw>
+<tags>
+<tag>zone</tag>
+</tags>
+<status status="PASS" starttime="20190429 13:18:01.956" endtime="20190429 13:18:53.444" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190429 13:18:01.633" endtime="20190429 13:18:53.445"></status>
+</suite>
+<status status="PASS" starttime="20190429 13:18:01.629" endtime="20190429 13:18:53.453"></status>
+</suite>
+<status status="PASS" starttime="20190429 13:18:01.588" endtime="20190429 13:18:53.458"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">zone</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Hubble demo">Hubble demo</stat>
+<stat pass="1" fail="0" id="s1-s1" name="0-1分区准备">Hubble demo.0-1分区准备</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="新增分区">Hubble demo.0-1分区准备.新增分区</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

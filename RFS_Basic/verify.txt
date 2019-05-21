@@ -1,0 +1,39 @@
+*** Settings ***
+Library           Selenium2Library
+
+*** Keywords ***
+Element Attribute Should Be Equal
+    [Arguments]    ${ele}    ${attribute}    ${fileds}    ${error_msg}
+    [Documentation]    Name:
+    ...    Element Attribute Should Be
+    ...
+    ...    Arguments:
+    ...    locator | attribute=None | expect | error_messages
+    ...
+    ...    元素属性应该为xxx
+    ${tmp}    Get Element Attribute    ${ele}    ${attribute}
+    Should Be Equal    ${tmp}    ${fileds}    ${error_msg}
+
+Element Attribute Should Contain
+    [Arguments]    ${ele}    ${attribute}    ${fileds}    ${error_msg}
+    [Documentation]    Name:
+    ...    Element Attribute Should Contain
+    ...
+    ...    Arguments:
+    ...    locator | attribute=None | expect | error_messages
+    ...
+    ...    元素属性应该包含xxx
+    ${tmp}    Get Element Attribute    ${ele}    ${attribute}
+    Should Contain    ${tmp}    ${fileds}    ${error_msg}
+
+Page Should Not Contain Element(attribute)
+    [Arguments]    ${ele}    ${attribute}    ${error_msg}
+    [Documentation]    Name:
+    ...    Element Attribute Should Contain
+    ...
+    ...    Arguments:
+    ...    locator | attribute=None | error_messages
+    ...
+    ...    元素属性应该包含xxx
+    ${tmp}    Get Element Attribute    ${ele}    ${attribute}
+    Page Should Not Contain Element    xpath=*//ul[@class='treeUl ng-scope']/li[2]/div/span/span[2][@tooltip='${tmp}']    ${error_msg}
